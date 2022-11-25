@@ -1,0 +1,74 @@
+use sys;
+show databases;
+use dakkada_bootcamp22;
+show tables;
+select * from DataScience_Track;
+select * from DataScience_Track where ID_No = 33 or Surname = 'Etim';
+select * from DataScience_Track where Surname = 'Patrick' and ID_No = 25;
+
+create table WebDevelopment_Track
+(ID_No int primary key Not Null,
+Surname varchar(13) Not Null,
+Firstname varchar(13) Not Null,
+Lastname varchar(13),
+Gender char(1) Not Null,
+phone varchar(13) Not Null,
+Email_Address varchar(30),
+Designation varchar(13),
+Asset_Status varchar(7));
+
+INSERT INTO WebDevelopment_Track VALUES (011,'Edet','Utang','James','F','08062800127','utjames@gmail.com','Participant','Yes');
+INSERT INTO WebDevelopment_Track VALUES (012,'Ita','Quintin','Jakes','M','08062811012','quintinj@gmail.com','Participant','Yes');
+INSERT INTO WebDevelopment_Track VALUES (013,'Akpanowo','Ifreke','James','M','08062281012','ifrekeakpa@gmail.com','Participant','Yes');
+INSERT INTO WebDevelopment_Track VALUES (014,'Ikpe','Peace','John','F','08062810312','peacejohn@gmail.com','Participant','No');
+INSERT INTO WebDevelopment_Track VALUES (015,'Akpa','Ima','Amos','F','08062841012','imaaa@gmail.com','Participant','Yes');
+INSERT INTO WebDevelopment_Track VALUES (016,'Effiong','Akanimo','Jonah','M','08056281012','akaneffiong@gmail.com','Participant','Yes');
+INSERT INTO WebDevelopment_Track VALUES (017,'Ekpa','Victoria','Joseph','F','08067281012','vickyek@gmail.com','Participant','Yes');
+INSERT INTO WebDevelopment_Track VALUES (018,'Ita','Hannah','Abel','F','08062880802','hannahita@gmail.com','Participant','No');
+INSERT INTO WebDevelopment_Track VALUES (019,'Ifiok','Iniobong','Aniefiok','M','08062681012','inianie@gmail.com','Participant','No');
+INSERT INTO WebDevelopment_Track VALUES (020,'Ekong','Uto','Chris','F','08034881012','utochris@gmail.com','Participant','Yes');
+
+select * from WebDevelopment_Track;
+
+create table CloudComputing_Track
+(ID_No int primary key Not Null,
+Surname varchar(13) Not Null,
+Firstname varchar(13) Not Null,
+Lastname varchar(13),
+Gender char(1) Not Null,
+phone varchar(13) Not Null,
+Email_Address varchar(30),
+Designation varchar(13),
+Asset_Status varchar(7));
+
+INSERT INTO CloudComputing_Track VALUES
+(141,'Yama','Godwin','Ukpe','M','08022121118','goddieyama@gmail.com','Participant','Yes'),
+(142,'Edu','Affiong','Ufi','F','08052121118','affyedu@gmail.com','Participant','Yes'),
+(143,'Ekpe','James','Victor','M','08034567898','jamesekpe@gmail.com','Participant','Yes'),
+(144,'Ekere','Jaime','Eno','M','08022345677','jaimeeno@gmail.com','Participant','Yes'),
+(145,'Etim','Ella','Johnny','F','08076789023','eljohn@gmail.com','Participant','Yes'),
+(146,'Bless','Uwemedimo','Mike','M','08033456789','uwemmike@gmail.com','Participant','Yes'),
+(147,'Etimama','Kufre','Hazel','M','08092827001','kufreetim@gmail.com','Participant','Yes'),
+(148,'Okonumo','Faith','Unyime','F','08068993456','faithokon@gmail.com','Participant','Yes'),
+(149,'Pat','Moses','Ben','M','08022810129','mosespat@gmail.com','Participant','Yes'),
+(150,'Udoma','Idaraobong','Joshua','F','08012810678','idjoshua@gmail.com','Participant','Yes');
+
+select * from CloudComputing_Track;
+
+show tables;
+desc DataScience_Track;
+desc WebDevelopment_Track;
+
+ALTER TABLE datascience_track RENAME TO DataScience;
+ALTER TABLE webdevelopment_track RENAME TO Web; 
+ALTER TABLE cloudcomputing_track RENAME TO Cloud;
+
+select * from datascience;
+ALTER TABLE datascience rename column phone to Mobile;
+
+UPDATE datascience SET Mobile = '08052810127' WHERE ID_No = 24;
+
+-- DELETE FROM datascience WHERE ID_No = 101;
+select * from datascience;
+
+

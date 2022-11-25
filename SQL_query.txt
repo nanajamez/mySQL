@@ -1,0 +1,35 @@
+create database Dakkada_Bootcamp22;
+use Dakkada_Bootcamp22;
+show tables;
+create table DataScience_Track
+(ID_No int primary key Not Null,
+Surname varchar(13) Not Null,
+Firstname varchar(13) Not Null,
+Lastname varchar(13),
+Gender char(1) Not Null,
+phone varchar(13) Not Null,
+Email_Address varchar(30),
+Designation varchar(13),
+Asset_Status varchar(7));
+
+-- Inserting values into our table
+INSERT INTO DataScience_Track VALUES (024,'Akpan','Unwana','James','F','08062810127','nanajakpan@gmail.com','Participant','Yes');
+
+select * from DataScience_Track;
+
+INSERT INTO DataScience_Track VALUES 
+(025,'Ndumayak','Godwin','Ufi','M','08032121118','palgwin@gmail.com','Participant','Yes'),
+(026,'Akpanowo','Idara','James','M','08064567898','akpanidara@gmail.com','Participant','Yes'),
+(027,'Timkere','Umo','Eno','M','08012345677','timumo@gmail.com','Participant','Yes'),
+(028,'Etuk','Emmanuella','John','F','08056789023','ellajohn@gmail.com','Participant','Yes'),
+(029,'Blessing','Uwem','Moses','M','08023456789','umoses@gmail.com','Participant','Yes'),
+(030,'Etim','Imaobong','James','F','08062827001','imaetim@gmail.com','Participant','Yes'),
+(031,'Okon','Wana','Unyime','F','08058993456','wanaunyime@gmail.com','Participant','Yes'),
+(032,'Patrick','Nsikak','Bernard','M','08052810129','nsibernard@gmail.com','Participant','Yes'),
+(033,'Udoh','Josiah','Idara','M','08062810678','josudoh@gmail.com','Participant','Yes');
+
+-- Accessing or querying our Table
+select * from DataScience_Track;
+select * from DataScience_Track where gender = 'M';
+select id_no,surname,firstname from DataScience_Track where gender = 'F';
+
